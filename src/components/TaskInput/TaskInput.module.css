@@ -1,0 +1,35 @@
+.Wrapper {
+  display: flex;
+  /* align-items: center; */
+}
+
+.Input {
+  display: block;
+  width: 400px;
+  height: 26px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  padding: 4px 10px;
+  outline-color: #999;
+  color: #777;
+}
+
+::placeholder {
+  color: #ccc;
+}
+
+.Button {
+  height: 26px;
+  padding: 4px 10px;
+  border: 1px solid #ccc;
+  margin-left: 9px;
+  border-radius: 6px;
+  text-transform: uppercase;
+  color: green;
+  font-weight: 400;
+}
+
+.Active {
+  font-weight: 600;
+}

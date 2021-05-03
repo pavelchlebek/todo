@@ -1,21 +1,17 @@
-import logo from "./logo.svg";
-import "./App.css";
+import React, { useState } from "react";
+
+import classes from "./App.module.css";
+
+import TaskInput from "./components/TaskInput/TaskInput";
+import Task from "./components/Task/Task";
 
 function App() {
+  const [currentInput, setCurrentInput] = useState("");
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>ToDo app coming soon!</p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={classes.Body}>
+      <h1 className={classes.Heading}>WORK TO-DOS</h1>
+      <TaskInput active />
+      <Task text="Don't panic! We got it!" />
     </div>
   );
 }

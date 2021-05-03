@@ -1,0 +1,18 @@
+.Wrapper {
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  height: 26px;
+  padding: 4px 10px;
+  width: 350px;
+  justify-content: space-between;
+  background-color: #aaaaff;
+  color: #eee;
+}
+
+.Delete {
+  font-weight: 900;
+  border: 2px solid #eee;
+  border-radius: 6px;
+  padding: 0 4px;
+}
