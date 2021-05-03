@@ -3,18 +3,28 @@
   border: 1px solid #77aaff;
   border-radius: 6px;
   margin-bottom: 10px;
-  height: 26px;
+  /* height: 26px; */
   padding: 4px 10px;
-  width: 350px;
+  width: 380px;
   justify-content: space-between;
   background-color: #aaccff;
   color: #fff;
 }
 
+.Text {
+  width: 250px;
+}
+
 .Delete {
-  font-weight: 800;
+  font-weight: 700;
   border: 1px solid #eee;
   border-radius: 6px;
   padding: 0 4px;
   cursor: pointer;
+  align-self: center;
+}
+
+.Delete:hover {
+  color: red;
+  border: 1px solid red;
 }

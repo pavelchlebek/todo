@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import classes from "./App.module.css";
 
@@ -8,14 +8,25 @@ import Task from "./components/Task/Task";
 function App() {
   const [currentInput, setCurrentInput] = useState("");
   const [tasks, setTasks] = useState([]);
+
+  useEffect(() => {
+    setTimeout(() => {
+      if (currentInput.length > 128) {
+        setCurrentInput(currentInput.substring(0, 128));
+      }
+    }, 500);
+  }, [currentInput]);
+
   const handleInput = (text) => {
     setCurrentInput(text);
   };
   const addTask = (event) => {
     event.preventDefault();
-    const newTasks = [...tasks, currentInput];
-    setTasks(newTasks);
-    setCurrentInput("");
+    if (currentInput) {
+      const newTasks = [...tasks, currentInput];
+      setTasks(newTasks);
+      setCurrentInput("");
+    }
   };
   const deleteTask = (index) => {
     const newTasks = [...tasks];
@@ -32,6 +43,9 @@ function App() {
         onChange={(event) => handleInput(event.target.value)}
         onAdd={addTask}
         onSubmit={addTask}
+        active={currentInput}
+        characters={128 - currentInput.length}
+        invalid={currentInput.length > 128}
       />
       <div className={classes.List}>
         {tasks.length > 0 &&
