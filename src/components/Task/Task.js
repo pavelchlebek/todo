@@ -6,7 +6,7 @@ const Task = (props) => {
   return (
     <div className={classes.Wrapper}>
       <span className={classes.Text}>{props.text}</span>
-      <span className={classes.Delete} onClick={props.onClickDelete}>
+      <span className={classes.Delete} onClick={props.onDelete}>
         X
       </span>
     </div>

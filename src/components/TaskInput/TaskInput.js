@@ -9,10 +9,17 @@ const TaskInput = (props) => {
   }
   return (
     <div className={classes.Wrapper}>
-      <input className={classes.Input} placeholder="New item..." />
-      <span className={buttonClasses} onClick={props.onClick}>
-        Add
-      </span>
+      <form className={classes.Form} onSubmit={props.onSubmit}>
+        <input
+          value={props.value}
+          className={classes.Input}
+          placeholder="New item..."
+          onChange={props.onChange}
+        />
+        <button className={buttonClasses} onClick={props.onAdd}>
+          Add
+        </button>
+      </form>
     </div>
   );
 };

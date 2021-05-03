@@ -18,16 +18,20 @@
 ::placeholder {
   color: #ccc;
 }
+.Form {
+  display: flex;
+}
 
 .Button {
-  height: 26px;
-  padding: 4px 10px;
+  height: 34px;
+  padding: 10px 10px;
   border: 1px solid #ccc;
   margin-left: 9px;
   border-radius: 6px;
   text-transform: uppercase;
   color: green;
   font-weight: 400;
+  cursor: pointer;
 }
 
 .Active {
