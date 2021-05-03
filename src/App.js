@@ -18,13 +18,12 @@ function App() {
     setCurrentInput("");
   };
   const deleteTask = (index) => {
-    console.log("task: ", index);
     const newTasks = [...tasks];
     newTasks.splice(index, 1);
     setTasks(newTasks);
   };
   // console.log("currentInput: ", currentInput);
-  console.log("tasks: ", tasks);
+  // console.log("tasks: ", tasks);
   return (
     <div className={classes.Body}>
       <h1 className={classes.Heading}>WORK TO-DOS</h1>
